@@ -1,0 +1,947 @@
+{
+    "manifest_version": "1.0.9",
+    "title": "NextApp",
+    "page_builder": "elementor",
+    "kit_version": "1.0.0",
+    "templates": [
+        {
+            "name": "Global Kit Styles",
+            "screenshot": "screenshots\/default-kit.jpg",
+            "source": "templates\/global.json",
+            "preview_url": "https:\/\/pxltheme.com\/templatekit\/nextapp",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "global-styles",
+                "include_in_zip": "1",
+                "elementor_pro_required": null,
+                "additional_template_information": [
+                    "These are the global theme styles configured through the Elementor Theme Styles area."
+                ]
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Page - Bank App",
+            "screenshot": "screenshots\/page-bank-app.jpg",
+            "source": "templates\/page-bank-app.json",
+            "preview_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/template-kit\/page-bank-app\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-home",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Page - Photo App",
+            "screenshot": "screenshots\/page-photo-app.jpg",
+            "source": "templates\/page-photo-app.json",
+            "preview_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/template-kit\/page-photo-app\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-home",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Page - Team",
+            "screenshot": "screenshots\/page-team.jpg",
+            "source": "templates\/page-team.json",
+            "preview_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/template-kit\/page-team\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Page - FAQs",
+            "screenshot": "screenshots\/page-faqs.jpg",
+            "source": "templates\/page-faqs.json",
+            "preview_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/template-kit\/page-faqs\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Page - Download",
+            "screenshot": "screenshots\/page-download.jpg",
+            "source": "templates\/page-download.json",
+            "preview_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/template-kit\/page-download\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Archive - Blog",
+            "screenshot": "screenshots\/archive-blog.jpg",
+            "source": "templates\/archive-blog.json",
+            "preview_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/template-kit\/archive-blog\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "archive-blog",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Page - Contact",
+            "screenshot": "screenshots\/page-contact.jpg",
+            "source": "templates\/page-contact.json",
+            "preview_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/template-kit\/page-contact\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Page - Pricing",
+            "screenshot": "screenshots\/page-pricing.jpg",
+            "source": "templates\/page-pricing.json",
+            "preview_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/template-kit\/page-pricing\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Page - Review",
+            "screenshot": "screenshots\/page-review.jpg",
+            "source": "templates\/page-review.json",
+            "preview_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/template-kit\/page-review\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Page - Home",
+            "screenshot": "screenshots\/page-home.jpg",
+            "source": "templates\/page-home.json",
+            "preview_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/template-kit\/page-home\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-home",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        }
+    ],
+    "required_plugins": [
+        {
+            "name": "Contact Form 7",
+            "version": "5.1.7",
+            "file": "contact-form-7\/wp-contact-form-7.php",
+            "author": "Takayuki Miyoshi"
+        },
+        {
+            "name": "Elementor",
+            "version": "2.9.8",
+            "file": "elementor\/elementor.php",
+            "author": "Elementor.com"
+        },
+        {
+            "name": "ElementsKit Lite",
+            "version": "1.5.2",
+            "file": "elementskit-lite\/elementskit-lite.php",
+            "author": "Wpmet"
+        }
+    ],
+    "images": [
+        {
+            "filename": "logo.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/04\/logo.png",
+            "templates": [
+                {
+                    "source": "templates\/page-bank-app.json",
+                    "name": "Page - Bank App"
+                }
+            ],
+            "filesize": 3348,
+            "dimensions": [
+                240,
+                60
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "footer-logo.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/footer-logo.png",
+            "templates": [
+                {
+                    "source": "templates\/page-bank-app.json",
+                    "name": "Page - Bank App"
+                },
+                {
+                    "source": "templates\/page-photo-app.json",
+                    "name": "Page - Photo App"
+                },
+                {
+                    "source": "templates\/page-team.json",
+                    "name": "Page - Team"
+                },
+                {
+                    "source": "templates\/page-faqs.json",
+                    "name": "Page - FAQs"
+                },
+                {
+                    "source": "templates\/page-download.json",
+                    "name": "Page - Download"
+                },
+                {
+                    "source": "templates\/archive-blog.json",
+                    "name": "Archive - Blog"
+                },
+                {
+                    "source": "templates\/page-contact.json",
+                    "name": "Page - Contact"
+                },
+                {
+                    "source": "templates\/page-pricing.json",
+                    "name": "Page - Pricing"
+                },
+                {
+                    "source": "templates\/page-review.json",
+                    "name": "Page - Review"
+                },
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 6650,
+            "dimensions": [
+                320,
+                80
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "hero-1.jpg",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/hero-1-600x338.jpg",
+            "templates": [
+                {
+                    "source": "templates\/page-bank-app.json",
+                    "name": "Page - Bank App"
+                },
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 184992,
+            "dimensions": [
+                1920,
+                1080
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "hero-6-img.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/04\/hero-6-img.png",
+            "templates": [
+                {
+                    "source": "templates\/page-bank-app.json",
+                    "name": "Page - Bank App"
+                }
+            ],
+            "filesize": 82561,
+            "dimensions": [
+                500,
+                658
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "image-15.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/04\/image-15.png",
+            "templates": [
+                {
+                    "source": "templates\/page-bank-app.json",
+                    "name": "Page - Bank App"
+                }
+            ],
+            "filesize": 34679,
+            "dimensions": [
+                500,
+                537
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "bg-graph.jpg",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/bg-graph-600x250.jpg",
+            "templates": [
+                {
+                    "source": "templates\/page-bank-app.json",
+                    "name": "Page - Bank App"
+                },
+                {
+                    "source": "templates\/page-photo-app.json",
+                    "name": "Page - Photo App"
+                },
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 58595,
+            "dimensions": [
+                1920,
+                800
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "scooter.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/scooter.png",
+            "templates": [
+                {
+                    "source": "templates\/page-bank-app.json",
+                    "name": "Page - Bank App"
+                },
+                {
+                    "source": "templates\/page-photo-app.json",
+                    "name": "Page - Photo App"
+                },
+                {
+                    "source": "templates\/page-pricing.json",
+                    "name": "Page - Pricing"
+                },
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 16368,
+            "dimensions": [
+                120,
+                120
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "airship.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/airship.png",
+            "templates": [
+                {
+                    "source": "templates\/page-bank-app.json",
+                    "name": "Page - Bank App"
+                },
+                {
+                    "source": "templates\/page-photo-app.json",
+                    "name": "Page - Photo App"
+                },
+                {
+                    "source": "templates\/page-pricing.json",
+                    "name": "Page - Pricing"
+                },
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 17436,
+            "dimensions": [
+                120,
+                120
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "photo-1519070543065-ac1764985512.jpeg",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/photo-1519070543065-ac1764985512-600x350.jpeg",
+            "templates": [
+                {
+                    "source": "templates\/page-photo-app.json",
+                    "name": "Page - Photo App"
+                }
+            ],
+            "filesize": 110543,
+            "dimensions": [
+                2316,
+                1351
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/unsplash.com\/photos\/cKH9F7Wjn9U"
+        },
+        {
+            "filename": "logo-white.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/logo-white.png",
+            "templates": [
+                {
+                    "source": "templates\/page-photo-app.json",
+                    "name": "Page - Photo App"
+                },
+                {
+                    "source": "templates\/page-team.json",
+                    "name": "Page - Team"
+                },
+                {
+                    "source": "templates\/page-faqs.json",
+                    "name": "Page - FAQs"
+                },
+                {
+                    "source": "templates\/page-download.json",
+                    "name": "Page - Download"
+                },
+                {
+                    "source": "templates\/archive-blog.json",
+                    "name": "Archive - Blog"
+                },
+                {
+                    "source": "templates\/page-contact.json",
+                    "name": "Page - Contact"
+                },
+                {
+                    "source": "templates\/page-pricing.json",
+                    "name": "Page - Pricing"
+                },
+                {
+                    "source": "templates\/page-review.json",
+                    "name": "Page - Review"
+                },
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 2822,
+            "dimensions": [
+                240,
+                60
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "photo-logo.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/photo-logo.png",
+            "templates": [
+                {
+                    "source": "templates\/page-photo-app.json",
+                    "name": "Page - Photo App"
+                }
+            ],
+            "filesize": 4044,
+            "dimensions": [
+                65,
+                65
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "hero-13-img.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/hero-13-img.png",
+            "templates": [
+                {
+                    "source": "templates\/page-photo-app.json",
+                    "name": "Page - Photo App"
+                }
+            ],
+            "filesize": 48461,
+            "dimensions": [
+                400,
+                445
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "image-10.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/image-10.png",
+            "templates": [
+                {
+                    "source": "templates\/page-photo-app.json",
+                    "name": "Page - Photo App"
+                }
+            ],
+            "filesize": 45694,
+            "dimensions": [
+                375,
+                595
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "bg-geometric.jpg",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/bg-geometric-600x234.jpg",
+            "templates": [
+                {
+                    "source": "templates\/page-photo-app.json",
+                    "name": "Page - Photo App"
+                },
+                {
+                    "source": "templates\/page-team.json",
+                    "name": "Page - Team"
+                },
+                {
+                    "source": "templates\/page-faqs.json",
+                    "name": "Page - FAQs"
+                },
+                {
+                    "source": "templates\/archive-blog.json",
+                    "name": "Archive - Blog"
+                },
+                {
+                    "source": "templates\/page-contact.json",
+                    "name": "Page - Contact"
+                },
+                {
+                    "source": "templates\/page-pricing.json",
+                    "name": "Page - Pricing"
+                },
+                {
+                    "source": "templates\/page-review.json",
+                    "name": "Page - Review"
+                },
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 22269,
+            "dimensions": [
+                1920,
+                750
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "bg-map.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/bg-map-600x338.png",
+            "templates": [
+                {
+                    "source": "templates\/page-photo-app.json",
+                    "name": "Page - Photo App"
+                }
+            ],
+            "filesize": 5959,
+            "dimensions": [
+                1920,
+                1080
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "page-hero.jpg",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/page-hero-600x63.jpg",
+            "templates": [
+                {
+                    "source": "templates\/page-team.json",
+                    "name": "Page - Team"
+                },
+                {
+                    "source": "templates\/page-faqs.json",
+                    "name": "Page - FAQs"
+                },
+                {
+                    "source": "templates\/page-download.json",
+                    "name": "Page - Download"
+                },
+                {
+                    "source": "templates\/archive-blog.json",
+                    "name": "Archive - Blog"
+                },
+                {
+                    "source": "templates\/page-contact.json",
+                    "name": "Page - Contact"
+                },
+                {
+                    "source": "templates\/page-pricing.json",
+                    "name": "Page - Pricing"
+                },
+                {
+                    "source": "templates\/page-review.json",
+                    "name": "Page - Review"
+                }
+            ],
+            "filesize": 19124,
+            "dimensions": [
+                1920,
+                200
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "1.jpg",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/1-600x400.jpg",
+            "templates": [
+                {
+                    "source": "templates\/page-team.json",
+                    "name": "Page - Team"
+                }
+            ],
+            "filesize": 61894,
+            "dimensions": [
+                640,
+                427
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/www.twenty20.com\/photos\/7465088d-b7ab-457f-9f1c-cb8bbd072d42"
+        },
+        {
+            "filename": "2.jpg",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/2-600x400.jpg",
+            "templates": [
+                {
+                    "source": "templates\/page-team.json",
+                    "name": "Page - Team"
+                }
+            ],
+            "filesize": 161836,
+            "dimensions": [
+                1055,
+                703
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/www.twenty20.com\/photos\/74def98d-ae8d-4d5d-94a5-d413c7b3a436"
+        },
+        {
+            "filename": "3.jpg",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/3.jpg",
+            "templates": [
+                {
+                    "source": "templates\/page-team.json",
+                    "name": "Page - Team"
+                }
+            ],
+            "filesize": 40419,
+            "dimensions": [
+                600,
+                460
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/www.twenty20.com\/photos\/8234740a-7b40-4434-b153-fe59580bda6a"
+        },
+        {
+            "filename": "4.jpg",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/4-600x450.jpg",
+            "templates": [
+                {
+                    "source": "templates\/page-team.json",
+                    "name": "Page - Team"
+                }
+            ],
+            "filesize": 130389,
+            "dimensions": [
+                1000,
+                750
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/www.twenty20.com\/photos\/0df10695-33b6-4d98-8276-f6c4585f04a8"
+        },
+        {
+            "filename": "5.jpg",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/5-600x450.jpg",
+            "templates": [
+                {
+                    "source": "templates\/page-team.json",
+                    "name": "Page - Team"
+                }
+            ],
+            "filesize": 85531,
+            "dimensions": [
+                640,
+                480
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/www.twenty20.com\/photos\/2b0cf8a2-a888-4e30-85e3-b8e985c1629e"
+        },
+        {
+            "filename": "6.jpeg",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/6-600x400.jpeg",
+            "templates": [
+                {
+                    "source": "templates\/page-team.json",
+                    "name": "Page - Team"
+                }
+            ],
+            "filesize": 59358,
+            "dimensions": [
+                850,
+                566
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/www.twenty20.com\/photos\/94ef5a51-f7ae-4039-a6eb-3903b1f17dbf"
+        },
+        {
+            "filename": "googleplay-tra-white.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/googleplay-tra-white.png",
+            "templates": [
+                {
+                    "source": "templates\/page-team.json",
+                    "name": "Page - Team"
+                },
+                {
+                    "source": "templates\/page-faqs.json",
+                    "name": "Page - FAQs"
+                },
+                {
+                    "source": "templates\/archive-blog.json",
+                    "name": "Archive - Blog"
+                },
+                {
+                    "source": "templates\/page-contact.json",
+                    "name": "Page - Contact"
+                },
+                {
+                    "source": "templates\/page-pricing.json",
+                    "name": "Page - Pricing"
+                },
+                {
+                    "source": "templates\/page-review.json",
+                    "name": "Page - Review"
+                },
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 3664,
+            "dimensions": [
+                328,
+                100
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "color-logo.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/color-logo.png",
+            "templates": [
+                {
+                    "source": "templates\/page-faqs.json",
+                    "name": "Page - FAQs"
+                },
+                {
+                    "source": "templates\/page-review.json",
+                    "name": "Page - Review"
+                }
+            ],
+            "filesize": 11750,
+            "dimensions": [
+                250,
+                250
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "download-icon.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/download-icon.png",
+            "templates": [
+                {
+                    "source": "templates\/page-download.json",
+                    "name": "Page - Download"
+                }
+            ],
+            "filesize": 14077,
+            "dimensions": [
+                512,
+                512
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "flight.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/flight.png",
+            "templates": [
+                {
+                    "source": "templates\/page-pricing.json",
+                    "name": "Page - Pricing"
+                }
+            ],
+            "filesize": 16153,
+            "dimensions": [
+                120,
+                120
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "appstore-tra-white.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/appstore-tra-white.png",
+            "templates": [
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 9205,
+            "dimensions": [
+                328,
+                100
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "hero-1-img.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/hero-1-img.png",
+            "templates": [
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 84116,
+            "dimensions": [
+                600,
+                675
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "image-01.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/image-01.png",
+            "templates": [
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 33784,
+            "dimensions": [
+                600,
+                590
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "image-11.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/image-11.png",
+            "templates": [
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 37110,
+            "dimensions": [
+                350,
+                625
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "photo-1515462277126-2dd0c162007a.jpeg",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/photo-1515462277126-2dd0c162007a-600x898.jpeg",
+            "templates": [
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 107330,
+            "dimensions": [
+                935,
+                1400
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/unsplash.com\/photos\/trYl7JYATH0"
+        },
+        {
+            "filename": "image-13.png",
+            "thumbnail_url": "https:\/\/pxltheme.com\/templatekit\/nextapp\/wp-content\/uploads\/2020\/03\/image-13.png",
+            "templates": [
+                {
+                    "source": "templates\/page-home.json",
+                    "name": "Page - Home"
+                }
+            ],
+            "filesize": 47875,
+            "dimensions": [
+                450,
+                550
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        }
+    ]
+}

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<id><![CDATA[1187]]></id>
+		<title><![CDATA[Atlantis Aquaventure & Lost Chambers Ticket]]></title>
+		<content><![CDATA[Atlantis-themed aquarium with underwater halls & tunnels housing marine life, plus feeding sessions.]]></content>
+		<starts_from><![CDATA[110]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/5.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1188]]></id>
+		<title><![CDATA[Burj Khalifa At the Top]]></title>
+		<content><![CDATA[At the Top is an outdoor observation deck on the Burj Khalifa. It opened on 5 January 2010 on the 124th floor. At 452 m, it was the highest outdoor observation deck in the world when it opened.]]></content>
+		<starts_from><![CDATA[154.50]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/photo-1573804013926-cfb2573c7f4d.jpeg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1189]]></id>
+		<title><![CDATA[4x4 Dune Bashing]]></title>
+		<content><![CDATA[Fun-filled adventures of Desert Safari Dubai with our exciting safari adventure packages. Camel Riding, Sand Boarding, Henna Painting, Sheesha, Live BBQ Dinner Buffet. ]]></content>
+		<starts_from><![CDATA[150]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/Dune-bashing.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1190]]></id>
+		<title><![CDATA[Camel Ride & Sandboarding]]></title>
+		<content><![CDATA[Escape Dubai and drive across the Red Arabian Desert in a 4WD vehicle. Enjoy the sunset, sandboarding, camel ride and visit the camel firm.]]></content>
+		<starts_from><![CDATA[150]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/Sandboarding_in_Dubai.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1191]]></id>
+		<title><![CDATA[Helicopter Tour]]></title>
+		<content><![CDATA[See Iconic Landmarks With The Best Helicopter Tour In Dubai, The Ultimate Dubai Experience. With Helicopter Trips Ranging From 12 Minutes To An Hour, Find The Best Package For You. Large Panoramic Windows. Shared & Exclusive.]]></content>
+		<starts_from><![CDATA[646]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/heli-dubainewjpg.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1192]]></id>
+		<title><![CDATA[Air Balloon Ride]]></title>
+		<content><![CDATA[Experience Hot Air Balloon Adventures & Rides in Dubai with family, friends & couple. One of the best things to do in Dubai, UAE]]></content>
+		<starts_from><![CDATA[1100]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/family-fun-in-the-desert-hot-air-balloon-4.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1193]]></id>
+		<title><![CDATA[Sky Diving]]></title>
+		<content><![CDATA[Skydiving center offering tandem parachuting along with photos & video, plus gyrocopter tours.]]></content>
+		<starts_from><![CDATA[1599]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/sky-dive-dubai-3-scaled.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1194]]></id>
+		<title><![CDATA[Jet Ski]]></title>
+		<content><![CDATA[Jet Ski is guaranteed to make your holiday the best. Don't miss the chance of experiencing from the sea with our Jetski Ride]]></content>
+		<starts_from><![CDATA[180]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/nemo-watersports-v2.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1195]]></id>
+		<title><![CDATA[IMG World]]></title>
+		<content><![CDATA[MG Worlds of Adventure is an indoor amusement park in the United Arab Emirates in Dubai. It is Dubai's first mega themed entertainment destination. The park is divided into five "epic zones".]]></content>
+		<starts_from><![CDATA[335]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/top-rides-at-img-worlds-of-adventure-predator-5.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1196]]></id>
+		<title><![CDATA[Speed Boat]]></title>
+		<content><![CDATA[Sightseeing tour of Dubai from a boat on the Persian Gulf · Travel at thrilling speeds of up to 30 knots · See the Burj Al Arab, Dubai Marina, and the Palm ...]]></content>
+		<starts_from><![CDATA[126]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/alwaslyachtsjpg.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1197]]></id>
+		<title><![CDATA[Dubai Aquarium]]></title>
+		<content><![CDATA[Underwater tunnel under a huge shark- & ray-filled tank, plus a creepy crawly zone with snakes.]]></content>
+		<starts_from><![CDATA[85]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/photo-1631311763672-095e08037cb0.jpeg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1198]]></id>
+		<title><![CDATA[Marina Cruise]]></title>
+		<content><![CDATA[Enjoy Dhow Cruise Dinner in Dubai Marina & cruise around iconic high rise Marina buildings. Continental & Arabic Buffet with Veg and Non-Veg dishes, Tanura Show, Music. and lot more.]]></content>
+		<starts_from><![CDATA[175]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/loveboatsuaejpg.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1199]]></id>
+		<title><![CDATA[Dhow Cruise]]></title>
+		<content><![CDATA[Enjoy Dhow Cruise Dinner in Dubai Marina & cruise around iconic high rise Marina buildings. Upper Deck With Open-Air Seating. Lower Deck With Air-Conditioned Seating.]]></content>
+		<starts_from><![CDATA[105]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/spice-souk-shopping-abra-creek-harbour-5.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1200]]></id>
+		<title><![CDATA[Al Maha Desert Resort]]></title>
+		<content><![CDATA[Al Maha, a Luxury Collection Desert Resort and Spa, Dubai is a private, guest-only oasis nestled among the lush palm groves, emerald canopies and iconic ...]]></content>
+		<starts_from><![CDATA[450]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/almahadesertresortdtcmjpg.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1201]]></id>
+		<title><![CDATA[La Perl]]></title>
+		<content><![CDATA[About The Show. La Perle is the region's first permanent show, located in the heart of Dubai at Al Habtoor City and brought to Dubai by Al Habtoor Group.]]></content>
+		<starts_from><![CDATA[259]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/caption.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1202]]></id>
+		<title><![CDATA[Aladdin Tour]]></title>
+		<content><![CDATA[Join me on one of the most beautiful areas in Dubai and create memories you cannot forget during this Fun tour which is mix of Street Food, Museums, shopping, culture and history. 
+Let me show you this unique side of Dubai like no other can!
+Enjoy stress-free visit to the local markets (souks) and Explore Grand Souk, spice Souk and Gold Souk and get the best deals with Aladdin. 
+Visit the main highlights of old Dubai and the museums in Fahidi historical neighborhood and learn a lot about Culture, history, beliefs and lifestyle of Dubai and Arabs explained with fun. All this while getting stuffed with several tastings including arabic coffee, Tea, dates, chocodates and street food. Cruise Dubai Creek with the traditional boat (Abra) and enjoy the best views .]]></content>
+		<starts_from><![CDATA[168]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/caption-1.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1203]]></id>
+		<title><![CDATA[Dubai Miracle Garden]]></title>
+		<content><![CDATA[The Dubai Miracle Garden is a flower garden located in the district of Dubailand, Dubai, United Arab Emirates. The garden was launched on Valentine's Day in 2013. It occupies over 72,000 square metres, making it the world's largest natural flower garden, featuring over 50 million flowers and 250 million plants.]]></content>
+		<starts_from><![CDATA[55]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/sights-and-sounds-miracle-garden.jpg]]></imagefeatured>
+	</node>
+	<node>
+		<id><![CDATA[1204]]></id>
+		<title><![CDATA[Xline Marina]]></title>
+		<content><![CDATA[Expansive, 16-degree zip line ride zooming through skyscrapers & over the marina .]]></content>
+		<starts_from><![CDATA[650]]></starts_from>
+		<tickets_available><![CDATA[]]></tickets_available>
+		<location><![CDATA[]]></location>
+		<imagefeatured><![CDATA[http://localhost/dubaiaction/app/wp-content/uploads/2021/11/unique-things-to-do-in-dubai-zipline-marina-1.jpg]]></imagefeatured>
+	</node>
+</data>
