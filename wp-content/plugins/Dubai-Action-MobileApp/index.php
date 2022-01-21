@@ -53,7 +53,7 @@ function da_attractions() {
         $data[$i]['author'] = $post->post_author;
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
-		//$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
 		$i++;
 	}
 
@@ -62,7 +62,7 @@ function da_attractions() {
 
 
 add_action('rest_api_init', function() {
-register_rest_route( 'da/v1', 'attractions/', array(
+register_rest_route( 'da/v2', 'attractions/', array(
 		'methods' => 'GET',
 		'callback' => 'da_attractions',
 	) );
