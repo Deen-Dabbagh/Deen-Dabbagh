@@ -60,7 +60,7 @@ function da_attractions() {
 	return $data;
 }
 
-function da_attraction() {
+function da_attraction($data) {
 	$post = get_post($data['id']);
 
 	$data = [];
@@ -69,6 +69,7 @@ function da_attraction() {
 		$data['title'] = $post->post_title;
 		$data['content'] = $post->post_content;
         $data['excerpt'] = $post->post_excerpt;
+        $data['price'] = get_field("price",$post->ID);
         $data['author'] = $post->post_author;
 		$data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
