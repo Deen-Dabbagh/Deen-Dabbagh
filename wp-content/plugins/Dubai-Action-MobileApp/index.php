@@ -64,18 +64,16 @@ function da_attraction() {
 	$post = get_post($data['id']);
 
 	$data = [];
-	$i = 0;
 
-		$data[$i]['id'] = $post->ID;
-		$data[$i]['title'] = $post->post_title;
-		$data[$i]['content'] = $post->post_content;
-        $data[$i]['excerpt'] = $post->post_excerpt;
-        $data[$i]['price'] = get_field("price",$post->ID);
-        $data[$i]['author'] = $post->post_author;
-		$data[$i]['slug'] = $post->post_name;
-        $data[$i]['date'] = $post->post_date;
-		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
-		$i++;
+		$data['id'] = $post->ID;
+		$data['title'] = $post->post_title;
+		$data['content'] = $post->post_content;
+        $data['excerpt'] = $post->post_excerpt;
+        $data['price'] = get_field("price",$post->ID);
+        $data['author'] = $post->post_author;
+		$data['slug'] = $post->post_name;
+        $data['date'] = $post->post_date;
+		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
 
 	return $data;
 }
