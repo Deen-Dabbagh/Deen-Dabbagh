@@ -60,12 +60,39 @@ function da_attractions() {
 	return $data;
 }
 
+function da_attraction() {
+	$post = get_post($data['id']);
+
+	$data = [];
+	$i = 0;
+
+		$data[$i]['id'] = $post->ID;
+		$data[$i]['title'] = $post->post_title;
+		$data[$i]['content'] = $post->post_content;
+        $data[$i]['excerpt'] = $post->post_excerpt;
+        $data[$i]['price'] = get_field("price",$post->ID);
+        $data[$i]['author'] = $post->post_author;
+		$data[$i]['slug'] = $post->post_name;
+        $data[$i]['date'] = $post->post_date;
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+		$i++;
+
+	return $data;
+}
+
+
 
 add_action('rest_api_init', function() {
 register_rest_route( 'da/v2', 'attractions/', array(
 		'methods' => 'GET',
 		'callback' => 'da_attractions',
 	) );
+
+    register_rest_route( 'da/v2', 'attraction/(?P<id>[a-zA-Z0-9-]+)', array(
+		'methods' => 'GET',
+		'callback' => 'da_attraction',
+	) );
+
 
 });
 
