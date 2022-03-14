@@ -36,8 +36,7 @@ add_filter('rest_prepare_post', 'da_rest_prepare_post', 10, 3);
 function da_attractions() {
 	$args = [
 		'numberposts' => 99999,
-		'post_type' => 'attraction',
-        'post__in' => 'posts'
+		'post_type' => 'attraction'
 	];
 
 	$posts = get_posts($args);
