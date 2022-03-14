@@ -34,12 +34,12 @@ add_filter('rest_prepare_post', 'da_rest_prepare_post', 10, 3);
 
 
 function da_attractions($data) {
-    var posts_in=explode($data['ids'],",");
+    $posts_in=explode($data['ids'],",");
 
 	$args = [
 		'numberposts' => 99999,
 		'post_type' => 'attraction',
-        'post__in' => posts_in
+        'post__in' => $posts_in
 	];
 
 	$posts = get_posts($args);
