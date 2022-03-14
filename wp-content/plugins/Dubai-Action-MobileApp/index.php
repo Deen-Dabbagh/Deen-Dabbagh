@@ -50,6 +50,7 @@ function da_attractions() {
 		$data[$i]['content'] = $post->post_content;
         $data[$i]['excerpt'] = $post->post_excerpt;
         $data[$i]['price'] = get_field("price",$post->ID);
+        $data[$i]['location'] = get_field("location",$post->ID);
         $data[$i]['author'] = $post->post_author;
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
@@ -70,6 +71,7 @@ function da_attraction($data) {
 		$data['content'] = $post->post_content;
         $data['excerpt'] = $post->post_excerpt;
         $data['price'] = get_field("price",$post->ID);
+        $data['location'] = get_field("location",$post->ID);
         $data['author'] = $post->post_author;
 		$data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
