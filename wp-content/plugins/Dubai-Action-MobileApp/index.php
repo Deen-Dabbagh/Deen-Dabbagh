@@ -72,6 +72,36 @@ function da_attractions($data) {
 	return $data;
 }
 
+
+function da_bucketlist() {
+    
+	$args = [
+		'numberposts' => 99999,
+		'post_type' => 'attraction'
+    ]
+
+	$posts = get_posts($args);
+
+	$data = [];
+	$i = 0;
+
+	foreach($posts as $post) {
+		$data[$i]['id'] = $post->ID;
+		$data[$i]['title'] = $post->post_title;
+		$data[$i]['content'] = $post->post_content;
+        $data[$i]['excerpt'] = $post->post_excerpt;
+        $data[$i]['price'] = get_field("price",$post->ID);
+        $data[$i]['location'] = get_field("location",$post->ID);
+        $data[$i]['author'] = $post->post_author;
+		$data[$i]['slug'] = $post->post_name;
+        $data[$i]['date'] = $post->post_date;
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+		$i++;
+	}
+
+	return $data;
+}
+
 function da_attraction($data) {
 	$post = get_post($data['id']);
 
@@ -99,6 +129,10 @@ register_rest_route( 'da/v2', 'attractions/(?P<includes>[a-zA-Z0-9-]+)', array(
 		'callback' => 'da_attractions',
 	) );
 
+    register_rest_route( 'da/v2', 'bucketlist/', array(
+		'methods' => 'GET',
+		'callback' => 'da_bucketlist',
+	) );
 
     register_rest_route( 'da/v2', 'attraction/(?P<id>[a-zA-Z0-9-]+)', array(
 		'methods' => 'GET',
