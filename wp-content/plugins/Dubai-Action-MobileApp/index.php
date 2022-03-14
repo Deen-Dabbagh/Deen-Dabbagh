@@ -37,17 +37,12 @@ function da_attractions($data) {
     $posts_in=explode("-",$data['includes']);
     // echo $data['includes'];
     //  print_r( $posts_in);
-    if ($data!=null){
+    
 	$args = [
 		'numberposts' => 99999,
 		'post_type' => 'attraction',
         'post__in' => $posts_in,
-    ];}else{
-        $args = [
-            'numberposts' => 99999,
-            'post_type' => 'attraction'
-        ];
-    }
+    ];
 	
 
 	$posts = get_posts($args);
