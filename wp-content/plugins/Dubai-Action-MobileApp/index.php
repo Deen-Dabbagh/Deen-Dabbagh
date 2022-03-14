@@ -43,7 +43,7 @@ function da_attractions($data) {
 			array(
 				'key'     => "post__in",
 				'value'   => $posts_in,
-			),
+			))
 			
 	];
 
