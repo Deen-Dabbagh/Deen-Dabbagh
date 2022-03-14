@@ -89,7 +89,7 @@ register_rest_route( 'da/v2', 'attractions/', array(
 		'callback' => 'da_attractions',
 	) );
 
-    register_rest_route( 'da/v2', 'attraction/(?P<id>[a-zA-Z0-9-]+)/posts/', array(
+    register_rest_route( 'da/v2', 'attraction/(?P<ids>[a-zA-Z0-9-]+)', array(
 		'methods' => 'GET',
 		'callback' => 'da_attraction',
 	) );
