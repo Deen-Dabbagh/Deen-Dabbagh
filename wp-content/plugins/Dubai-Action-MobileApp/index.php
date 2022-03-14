@@ -35,7 +35,8 @@ add_filter('rest_prepare_post', 'da_rest_prepare_post', 10, 3);
 
 function da_attractions($data) {
     $posts_in=explode($data['includes'],"-");
- echo $posts_in;
+    echo $data['includes'];
+    echo $posts_in;
 	$args = [
 		'numberposts' => 99999,
 		'post_type' => 'attraction',
