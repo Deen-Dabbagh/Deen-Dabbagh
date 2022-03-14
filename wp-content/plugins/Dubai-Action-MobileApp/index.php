@@ -78,7 +78,7 @@ function da_bucketlist() {
 	$args = [
 		'numberposts' => 99999,
 		'post_type' => 'attraction'
-    ]
+    ];
 
 	$posts = get_posts($args);
 
