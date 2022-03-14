@@ -40,13 +40,9 @@ function da_attractions($data) {
 	$args = [
 		'numberposts' => 99999,
 		'post_type' => 'attraction',
-        'meta_query' => array(
-			array(
-				'key'     => "post__in",
-				'value'   => $posts_in,
-			))
-			
-	];
+        'post__in' => $posts_in,
+    ];
+	
 
 	$posts = get_posts($args);
 
