@@ -36,7 +36,8 @@ add_filter('rest_prepare_post', 'da_rest_prepare_post', 10, 3);
 function da_attractions() {
 	$args = [
 		'numberposts' => 99999,
-		'post_type' => 'attraction'
+		'post_type' => 'attraction',
+        'post__in' => 'posts'
 	];
 
 	$posts = get_posts($args);
@@ -88,7 +89,7 @@ register_rest_route( 'da/v2', 'attractions/', array(
 		'callback' => 'da_attractions',
 	) );
 
-    register_rest_route( 'da/v2', 'attraction/(?P<id>[a-zA-Z0-9-]+)', array(
+    register_rest_route( 'da/v2', 'attraction/(?P<id>[a-zA-Z0-9-]+)/posts', array(
 		'methods' => 'GET',
 		'callback' => 'da_attraction',
 	) );
