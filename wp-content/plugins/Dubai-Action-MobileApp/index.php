@@ -37,7 +37,7 @@ function da_attractions() {
 	$args = [
 		'numberposts' => 99999,
 		'post_type' => 'attraction',
-        'post__in' => posts
+        'post__in' => 'posts'
 	];
 
 	$posts = get_posts($args);
