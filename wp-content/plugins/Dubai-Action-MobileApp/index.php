@@ -180,6 +180,11 @@ register_rest_route( 'da/v2', 'attractions/(?P<includes>[a-zA-Z0-9-]+)', array(
 		'callback' => 'da_attraction',
 	) );
 
+    register_rest_route( 'da/v2', 'gems/', array(
+		'methods' => 'GET',
+		'callback' => 'da_gems',
+	) );
+
     register_rest_route( 'da/v2', 'gems/(?P<includes>[a-zA-Z0-9-]+)', array(
 		'methods' => 'GET',
 		'callback' => 'da_gems',
