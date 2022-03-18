@@ -89,7 +89,6 @@ function da_gem($data) {
 function da_gems($data) {
     // echo $_GET['tags'];
     $tags=explode(",",$_GET['tags']);
-    print_r($tags);
 
     if ($data['args']){
 	$args = [
@@ -100,6 +99,7 @@ function da_gems($data) {
             $tags
         ),
     ];
+    print_r($args);
 }
 else 
 {
