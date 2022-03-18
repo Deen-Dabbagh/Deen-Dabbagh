@@ -87,7 +87,7 @@ function da_gem($data) {
 }
 
 function da_gems($data) {
-    print_r($data);
+    echo $_GET['tags'];
     if ($data['args']){
     $posts_in=explode("-",$data['includes']);
     // echo $data['includes'];
