@@ -93,7 +93,7 @@ function da_gems($data) {
     $posts_in=explode("-",$data['includes']);
     // echo $data['includes'];
     //  print_r( $posts_in);
-    
+    print_r($tags);
 	$args = [
 		'numberposts' => 99999,
 		'post_type' => 'hidden',
