@@ -120,6 +120,7 @@ else
         $data[$i]['location'] = get_field("location",$post->ID);
         $data[$i]['author'] = $post->post_author;
 		$data[$i]['slug'] = $post->post_name;
+        $data[$i]['tags'] = $post->post_tags;
         $data[$i]['date'] = $post->post_date;
 		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
 		$i++;
