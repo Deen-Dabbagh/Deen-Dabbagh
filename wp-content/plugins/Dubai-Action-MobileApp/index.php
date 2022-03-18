@@ -67,6 +67,58 @@ function da_attractions($data) {
 	return $data;
 }
 
+function da_gem($data) {
+	$post = get_post($data['id']);
+
+	$data = [];
+
+		$data['id'] = $post->ID;
+		$data['title'] = $post->post_title;
+		$data['content'] = $post->post_content;
+        $data['excerpt'] = $post->post_excerpt;
+        $data['price'] = get_field("price",$post->ID);
+        $data['location'] = get_field("location",$post->ID);
+        $data['author'] = $post->post_author;
+		$data['slug'] = $post->post_name;
+        $data['date'] = $post->post_date;
+		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+
+	return $data;
+}
+
+function da_gems($data) {
+    $posts_in=explode("-",$data['includes']);
+    // echo $data['includes'];
+    //  print_r( $posts_in);
+    
+	$args = [
+		'numberposts' => 99999,
+		'post_type' => 'hidden',
+        'post__in' => $posts_in,
+    ];
+	
+
+	$posts = get_posts($args);
+
+	$data = [];
+	$i = 0;
+
+	foreach($posts as $post) {
+		$data[$i]['id'] = $post->ID;
+		$data[$i]['title'] = $post->post_title;
+		$data[$i]['content'] = $post->post_content;
+        $data[$i]['excerpt'] = $post->post_excerpt;
+        $data[$i]['price'] = get_field("price",$post->ID);
+        $data[$i]['location'] = get_field("location",$post->ID);
+        $data[$i]['author'] = $post->post_author;
+		$data[$i]['slug'] = $post->post_name;
+        $data[$i]['date'] = $post->post_date;
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+		$i++;
+	}
+
+	return $data;
+}
 
 function da_bucketlist() {
     
@@ -123,16 +175,26 @@ register_rest_route( 'da/v2', 'attractions/(?P<includes>[a-zA-Z0-9-]+)', array(
 		'methods' => 'GET',
 		'callback' => 'da_attractions',
 	) );
+    register_rest_route( 'da/v2', 'attraction/(?P<id>[a-zA-Z0-9-]+)', array(
+		'methods' => 'GET',
+		'callback' => 'da_attraction',
+	) );
+
+    register_rest_route( 'da/v2', 'gems/(?P<includes>[a-zA-Z0-9-]+)', array(
+		'methods' => 'GET',
+		'callback' => 'da_gems',
+	) );
+    register_rest_route( 'da/v2', 'gem/(?P<id>[a-zA-Z0-9-]+)', array(
+		'methods' => 'GET',
+		'callback' => 'da_gem',
+	) );
 
     register_rest_route( 'da/v2', 'bucketlist/', array(
 		'methods' => 'GET',
 		'callback' => 'da_bucketlist',
 	) );
 
-    register_rest_route( 'da/v2', 'attraction/(?P<id>[a-zA-Z0-9-]+)', array(
-		'methods' => 'GET',
-		'callback' => 'da_attraction',
-	) );
+    
 
 
 });
