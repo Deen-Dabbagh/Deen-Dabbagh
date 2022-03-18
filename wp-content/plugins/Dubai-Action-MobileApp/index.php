@@ -91,7 +91,7 @@ function da_gems($data) {
    
 
     if ($tags){
-        $tags=explode(",",$_GET['tags']);
+        // $tags=explode(",",$_GET['tags']);
 	$args = [
 		'numberposts' => 99999,
 		'post_type' => 'hidden',
