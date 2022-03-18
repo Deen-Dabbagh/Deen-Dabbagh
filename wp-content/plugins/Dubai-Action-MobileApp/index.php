@@ -88,7 +88,7 @@ function da_gem($data) {
 
 function da_gems($data) {
     // echo $_GET['tags'];
-    $tags=$_GET['tags'];
+    $tags=explode(",",$_GET['tags']);
     if ($data['args']){
     $posts_in=explode("-",$data['includes']);
     // echo $data['includes'];
@@ -98,7 +98,9 @@ function da_gems($data) {
 		'numberposts' => 99999,
 		'post_type' => 'hidden',
         'post__in' => $posts_in,
-        'tag_slug__in' => $tags,
+        'terms'     =>  array(
+            $tags
+        ),
     ];
 }
 else 
