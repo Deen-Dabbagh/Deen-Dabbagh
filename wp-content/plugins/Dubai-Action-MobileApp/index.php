@@ -87,6 +87,7 @@ function da_gem($data) {
 }
 
 function da_gems($data) {
+    if ($data!=''){
     $posts_in=explode("-",$data['includes']);
     // echo $data['includes'];
     //  print_r( $posts_in);
@@ -96,8 +97,14 @@ function da_gems($data) {
 		'post_type' => 'hidden',
         'post__in' => $posts_in,
     ];
-	
-
+}
+else 
+{
+    $args = [
+		'numberposts' => 99999,
+		'post_type' => 'hidden',
+    ];
+}
 	$posts = get_posts($args);
 
 	$data = [];
