@@ -97,7 +97,7 @@ function da_gems($data) {
         'post__in' => $posts_in,
         'tag_slug__in' => $tags
     ];
-     print_r($args);
+    //  print_r($args);
 }
 else 
 {
