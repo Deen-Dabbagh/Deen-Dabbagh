@@ -52,7 +52,7 @@ $i=0;
     if (is_null($page)){
     $my_post = array(
         'post_title'    => wp_strip_all_tags( $news['title'] ),
-        'post_content'  =>  $news['summary']." <br/><br/><a href='"+$news['link']+"Source</a>",
+        'post_content'  =>  $news['summary']." <br/><br/><a href='".$news['link']."Source</a>",
         'post_status'   => 'publish',
         'post_author'   => 1,
         'post_category' => array( 1 )
