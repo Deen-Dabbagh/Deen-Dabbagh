@@ -19,7 +19,7 @@ function write_news(){
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://free-news.p.rapidapi.com/v1/search?q=Dubai&lang=en",
+	CURLOPT_URL => "https://free-news.p.rapidapi.com/v1/search?q=Dubai",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_ENCODING => "",
