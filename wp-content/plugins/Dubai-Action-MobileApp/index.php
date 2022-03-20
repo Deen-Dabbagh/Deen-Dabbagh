@@ -17,8 +17,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 function da_rest_prepare_post($data, $post, $request) {
     $_data = $data->data;
     $_data["custom"]["td_video"] = get_post_meta($post->ID, 'td_post_video', true) ?? '';
-    // $_data['custom']["featured_image"] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
-    $_data['custom']["featured_image"]=get_post_meta( $post->ID, 'featuredimg', true );
+    $_data['custom']["featured_image"] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta( $post->ID, 'featuredimg', true );
+    // $_data['custom']["featured_image"]=get_post_meta( $post->ID, 'featuredimg', true );
 	$_data['custom']["author"]["name"]   = get_author_name($_data['author']);
     $_data['custom']["author"]["avatar"] = get_avatar_url($_data['author']);
     $_data['custom']["categories"] = get_the_category($_data["id"]);
