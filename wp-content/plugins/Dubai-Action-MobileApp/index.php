@@ -132,10 +132,11 @@ else
 	return $data;
 }
 
-function da_bucketlist() {
-    
+function da_bucketlist($data) {
+    $limit=$_GET['limit'];
+if ($limit!='')$numposts=$limit; else $numposts=99999;
 	$args = [
-		'numberposts' => 99999,
+		'numberposts' => $numposts,
 		'post_type' => 'attraction'
     ];
 
@@ -206,7 +207,7 @@ register_rest_route( 'da/v2', 'attractions/(?P<includes>[a-zA-Z0-9-]+)', array(
 		'callback' => 'da_gem',
 	) );
 
-    register_rest_route( 'da/v2', 'bucketlist/', array(
+    register_rest_route( 'da/v2', 'bucketlist/(?P<id>[a-zA-Z0-9-]+)', array(
 		'methods' => 'GET',
 		'callback' => 'da_bucketlist',
 	) );
