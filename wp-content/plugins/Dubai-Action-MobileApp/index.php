@@ -133,7 +133,7 @@ else
 }
 
 function da_bucketlist($data) {
-    $limit=$_GET['limit'];
+    $limit=$data['limit'];
 if ($limit!='')$numposts=$limit; else $numposts=99999;
 	$args = [
 		'numberposts' => $numposts,
