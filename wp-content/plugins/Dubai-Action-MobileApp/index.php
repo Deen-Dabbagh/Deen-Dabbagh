@@ -207,7 +207,7 @@ register_rest_route( 'da/v2', 'attractions/(?P<includes>[a-zA-Z0-9-]+)', array(
 		'callback' => 'da_gem',
 	) );
 
-    register_rest_route( 'da/v2', 'bucketlist/(?P<id>[a-zA-Z0-9-]+)', array(
+    register_rest_route( 'da/v2', 'bucketlist/(?P<limit>[a-zA-Z0-9-]+)', array(
 		'methods' => 'GET',
 		'callback' => 'da_bucketlist',
 	) );
