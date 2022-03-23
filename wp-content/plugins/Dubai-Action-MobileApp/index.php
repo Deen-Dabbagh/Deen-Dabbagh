@@ -273,7 +273,7 @@ register_rest_route( 'da/v2', 'attractions/(?P<includes>[a-zA-Z0-9-]+)', array(
 		'callback' => 'da_attraction',
 	) );
 
-    register_rest_route( 'da/v2', 'posts/(?P<includes>[a-zA-Z0-9-]+)', array(
+    register_rest_route( 'da/v2', 'posts/', array(
 		'methods' => 'GET',
 		'callback' => 'da_posts',
 	) );
