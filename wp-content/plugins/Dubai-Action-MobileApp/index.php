@@ -225,8 +225,10 @@ function da_posts($data) {
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
-		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",false);
-		$i++;
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original");
+		if ($data[$i]['featured_image']=="") get_post_meta($post->ID,"featuredimg",false);
+
+        $i++;
 	}
 
 	return $data;
