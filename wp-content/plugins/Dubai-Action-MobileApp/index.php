@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // function da_rest_prepare_post($data, $post, $request) {
 //     // $_data = $data->data;
-//     // $_data["custom"]["td_video"] = get_post_meta($post->ID, 'td_post_video', true) ?? '';
+//     // $_data["custom"]["td_video"] = get_post_meta($post->ID, 'td_post_video', true) ?? get_post_meta("featuredimg");
 //     // $_data['custom']["featured_image"] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta( $post->ID, 'featuredimg', true );
     
 //     // if ($_data['custom']["featured_image"]=='')$_data['custom']["featured_image"]=get_post_meta( $post->ID, 'featuredimg', true );
@@ -46,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 //         $data[$i]['author'] = $post->post_author;
 // 		$data[$i]['slug'] = $post->post_name;
 //         $data[$i]['date'] = $post->post_date;
-// 		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+// 		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta("featuredimg");
 // 		$i++;
 // 	}
 
@@ -88,7 +88,7 @@ function da_attractions($data) {
         $data[$i]['author'] =get_the_author_meta($data[$i]['author']);
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
-		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta("featuredimg");
 		$i++;
 	}
 
@@ -111,7 +111,7 @@ function da_gem($data) {
         $data["author"]["avatar"] = get_avatar_url($_data['author']);
         $data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
-		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta("featuredimg");
 
 	return $data;
 }
@@ -155,7 +155,7 @@ else
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
         $data[$i]['tags'] = get_the_tags($post->ID);
         $data[$i]['date'] = $post->post_date;
-		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta("featuredimg");
 		$i++;
 	}
 
@@ -188,7 +188,7 @@ if ($limit!='')$numposts=$limit; else $numposts=99999;
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
-		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta("featuredimg");
 		$i++;
 	}
 
@@ -225,7 +225,7 @@ function da_posts($data) {
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
-		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta("featuredimg");
 		$i++;
 	}
 
@@ -249,7 +249,7 @@ function da_post($data) {
         $data["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
-		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta("featuredimg");
 
 	return $data;
 }
@@ -271,7 +271,7 @@ function da_attraction($data) {
         $data["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
-		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta("featuredimg");
 
 	return $data;
 }
