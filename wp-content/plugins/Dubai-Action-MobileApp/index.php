@@ -199,9 +199,10 @@ function da_posts($data) {
     // $posts_in=explode("-",$data['includes']);
     // echo $data['includes'];
     //  print_r( $posts_in);
-    
+    $categories=explode(",",$_GET['categories']);
 	$args = [
 		'numberposts' => 99999,
+        'category__in'		=> $categories
 		// 'post_type' => 'post',
         // 'post__in' => $posts_in,
     ];
