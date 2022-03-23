@@ -226,7 +226,7 @@ function da_posts($data) {
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
 		get_the_post_thumbnail_url($post->ID, "original") ?? $data[$i]['featured_image'] =get_the_post_thumbnail_url($post->ID, "original") ;
-		$data[$i]['featured_image'] ?? $data[$i]['featured_image'] =get_post_meta($post->ID,"featuredimg",false);
+		$data[$i]['featured_image'] ?? $data[$i]['featured_image'] =get_post_meta($post->ID,"featuredimg",true);
 
         $i++;
 	}
