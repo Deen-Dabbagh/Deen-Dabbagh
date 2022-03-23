@@ -188,14 +188,14 @@ if ($limit!='')$numposts=$limit; else $numposts=99999;
 }
 
 function da_posts($data) {
-    $posts_in=explode("-",$data['includes']);
+    // $posts_in=explode("-",$data['includes']);
     // echo $data['includes'];
     //  print_r( $posts_in);
     
 	$args = [
 		'numberposts' => 99999,
-		'post_type' => 'attraction',
-        'post__in' => $posts_in,
+		// 'post_type' => 'post',
+        // 'post__in' => $posts_in,
     ];
 	
 
