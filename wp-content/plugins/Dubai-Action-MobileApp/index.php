@@ -210,13 +210,9 @@ function da_posts($data) {
     // echo $data['includes'];
     //  print_r( $posts_in);
     $categories=explode(",",$_GET['categories']);
-    $orderby=$_GET['orderby'];
-    $order=$_GET['order'];
 	$args = [
 		'numberposts' => 99999,
-        'category__in'		=> $categories,
-        'order_by' =>$orderby,
-        'order' =>$order
+        'category__in'		=> $categories
 		// 'post_type' => 'post',
         // 'post__in' => $posts_in,
     ];
