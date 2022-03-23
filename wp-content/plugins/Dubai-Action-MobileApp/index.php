@@ -232,7 +232,8 @@ function da_posts($data) {
 }
 function getPostFeatured($id){
     $img=get_the_post_thumbnail_url($id, "original");
-		$img!=false ? $returned=$img : $returned='';
+		$img!=false ? $returned=$img : $returned=get_post_meta($id,"featuredimg",true);
+        
         return $returned;
 }
 function da_post($data) {
