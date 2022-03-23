@@ -226,9 +226,8 @@ function da_posts($data) {
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
-		get_the_post_thumbnail_url($post->ID, "original") ?? $data[$i]['featured_image'] =get_the_post_thumbnail_url($post->ID, "original") ;
-		$data[$i]['featured_image'] ?? $data[$i]['featured_image'] =get_post_meta($post->ID,"featuredimg",true);
-
+        $img=get_the_post_thumbnail_url($post->ID, "original");
+		$img!=false ?? $data[$i]['featured_image'] =$img ;
         $i++;
 	}
 
@@ -252,9 +251,8 @@ function da_post($data) {
         $data["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
-		get_the_post_thumbnail_url($post->ID, "original") ?? $data['featured_image'] =get_the_post_thumbnail_url($post->ID, "original") ;
-		$data['featured_image'] ?? $data['featured_image'] =get_post_meta($post->ID,"featuredimg",true);
-
+        $img=get_the_post_thumbnail_url($post->ID, "original");
+		$img!=false ?? $data['featured_image'] =$img ;
 	return $data;
 }
 
@@ -262,7 +260,6 @@ function da_attraction($data) {
 	$post = get_post($data['id']);
 
 	$data = [];
-
 		$data['id'] = $post->ID;
 		$data['title'] = $post->post_title;
 		$data['content'] = $post->post_content;
@@ -275,7 +272,8 @@ function da_attraction($data) {
         $data["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
-		get_the_post_thumbnail_url($post->ID, "original") ?? $data['featured_image'] =get_the_post_thumbnail_url($post->ID, "original") ;
+        $img=get_the_post_thumbnail_url($post->ID, "original");
+		$img!=false ?? $data['featured_image'] =$img ;
 		$data['featured_image'] ?? $data['featured_image'] =get_post_meta($post->ID,"featuredimg",true);
 
 	return $data;
