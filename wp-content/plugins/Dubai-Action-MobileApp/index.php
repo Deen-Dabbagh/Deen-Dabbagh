@@ -85,7 +85,6 @@ function da_attractions($data) {
         $_data[$i]['author'] = $post->post_author;
         $data[$i]["author"]["name"]   = get_the_author_meta($_data['author']);
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
-        $data[$i]['author'] =get_the_author_meta($data[$i]['author']);
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
         $data[$i]['featured_image']= getPostFeatured($post->ID);
@@ -233,7 +232,7 @@ function da_posts($data) {
 function getPostFeatured($id){
     $img=get_the_post_thumbnail_url($id, "original");
 		$img!=false ? $returned=$img : $returned=get_post_meta($id,"featuredimg",true);
-        
+
         return $returned;
 }
 function da_post($data) {
