@@ -230,7 +230,7 @@ function da_posts($data) {
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
         $data[$i]['featured_image']= getPostFeatured($post->ID);
-        $data['gallery'] = get_field("gallery",$post->ID);
+        $data[$i]['gallery'] = get_field("gallery",$post->ID);
 
         $i++;
 	}
