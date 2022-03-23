@@ -15,21 +15,43 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 function da_rest_prepare_post($data, $post, $request) {
-    $_data = $data->data;
-    $_data["custom"]["td_video"] = get_post_meta($post->ID, 'td_post_video', true) ?? '';
-    $_data['custom']["featured_image"] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta( $post->ID, 'featuredimg', true );
+    // $_data = $data->data;
+    // $_data["custom"]["td_video"] = get_post_meta($post->ID, 'td_post_video', true) ?? '';
+    // $_data['custom']["featured_image"] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta( $post->ID, 'featuredimg', true );
     
-    if ($_data['custom']["featured_image"]=='')$_data['custom']["featured_image"]=get_post_meta( $post->ID, 'featuredimg', true );
-	$_data['custom']["author"]["name"]   = get_the_author_meta($_data['author']);
-    $_data['custom']["author"]["avatar"] = get_avatar_url($_data['author']);
-    $_data['custom']["categories"] = get_the_category($_data["id"]);
-    $_data['custom']["startdate"] = get_field('event_start',$post->ID);
-    $_data['custom']["enddate"] = get_field('event_end',$post->ID);
-    $_data['gallery'] = get_field('gallery');
-    $_data['ticketlink']= get_field('tickets_available',$post->ID);
+    // if ($_data['custom']["featured_image"]=='')$_data['custom']["featured_image"]=get_post_meta( $post->ID, 'featuredimg', true );
+	// $_data['custom']["author"]["name"]   = get_the_author_meta($_data['author']);
+    // $_data['custom']["author"]["avatar"] = get_avatar_url($_data['author']);
+    // $_data['custom']["categories"] = get_the_category($_data["id"]);
+    // $_data['custom']["startdate"] = get_field('event_start',$post->ID);
+    // $_data['custom']["enddate"] = get_field('event_end',$post->ID);
+    // $_data['gallery'] = get_field('gallery');
+    // $_data['ticketlink']= get_field('tickets_available',$post->ID);
 
-    $data->data = $_data;
-    return $data;
+    // $data->data = $_data;
+    // return $data;
+    
+    $posts = get_posts();
+
+	$data = [];
+	$i = 0;
+
+	foreach($posts as $post) {
+		$data[$i]['id'] = $post->ID;
+		$data[$i]['title'] = $post->post_title;
+		$data[$i]['content'] = $post->post_content;
+        $data[$i]['excerpt'] = $post->post_excerpt;
+        $data[$i]['price'] = get_field("price",$post->ID);
+        $data[$i]['location'] = get_field("location",$post->ID);
+        $data[$i]['author'] = $post->post_author;
+		$data[$i]['slug'] = $post->post_name;
+        $data[$i]['date'] = $post->post_date;
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+		$i++;
+	}
+
+	return $data;
+
 }
 
 add_filter('rest_prepare_post', 'da_rest_prepare_post', 10, 3);
