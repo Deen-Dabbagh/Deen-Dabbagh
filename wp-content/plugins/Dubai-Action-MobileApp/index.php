@@ -88,6 +88,8 @@ function da_attractions($data) {
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
         $data[$i]['featured_image']= getPostFeatured($post->ID);
+        $data[$i]['gallery'] = get_field("gallery",$post->ID);
+
         		$i++;
 	}
 
@@ -111,6 +113,8 @@ function da_gem($data) {
         $data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
         $data['featured_image']= getPostFeatured($post->ID);
+        $data['gallery'] = get_field("gallery",$post->ID);
+
 	return $data;
 }
 
@@ -153,6 +157,7 @@ else
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
         $data[$i]['tags'] = get_the_tags($post->ID);
         $data[$i]['date'] = $post->post_date;
+        $data[$i]['gallery'] = get_field("gallery",$post->ID);
         $data[$i]['featured_image']= getPostFeatured($post->ID);
 		$i++;
 	}
@@ -186,6 +191,7 @@ if ($limit!='')$numposts=$limit; else $numposts=99999;
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
+        $data[$i]['gallery'] = get_field("gallery",$post->ID);
 		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",false);
 		$i++;
 	}
@@ -224,6 +230,8 @@ function da_posts($data) {
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
         $data[$i]['featured_image']= getPostFeatured($post->ID);
+        $data['gallery'] = get_field("gallery",$post->ID);
+
         $i++;
 	}
 
