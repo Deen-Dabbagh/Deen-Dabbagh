@@ -14,47 +14,47 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 
-function da_rest_prepare_post($data, $post, $request) {
-    // $_data = $data->data;
-    // $_data["custom"]["td_video"] = get_post_meta($post->ID, 'td_post_video', true) ?? '';
-    // $_data['custom']["featured_image"] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta( $post->ID, 'featuredimg', true );
+// function da_rest_prepare_post($data, $post, $request) {
+//     // $_data = $data->data;
+//     // $_data["custom"]["td_video"] = get_post_meta($post->ID, 'td_post_video', true) ?? '';
+//     // $_data['custom']["featured_image"] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta( $post->ID, 'featuredimg', true );
     
-    // if ($_data['custom']["featured_image"]=='')$_data['custom']["featured_image"]=get_post_meta( $post->ID, 'featuredimg', true );
-	// $_data['custom']["author"]["name"]   = get_the_author_meta($_data['author']);
-    // $_data['custom']["author"]["avatar"] = get_avatar_url($_data['author']);
-    // $_data['custom']["categories"] = get_the_category($_data["id"]);
-    // $_data['custom']["startdate"] = get_field('event_start',$post->ID);
-    // $_data['custom']["enddate"] = get_field('event_end',$post->ID);
-    // $_data['gallery'] = get_field('gallery');
-    // $_data['ticketlink']= get_field('tickets_available',$post->ID);
+//     // if ($_data['custom']["featured_image"]=='')$_data['custom']["featured_image"]=get_post_meta( $post->ID, 'featuredimg', true );
+// 	// $_data['custom']["author"]["name"]   = get_the_author_meta($_data['author']);
+//     // $_data['custom']["author"]["avatar"] = get_avatar_url($_data['author']);
+//     // $_data['custom']["categories"] = get_the_category($_data["id"]);
+//     // $_data['custom']["startdate"] = get_field('event_start',$post->ID);
+//     // $_data['custom']["enddate"] = get_field('event_end',$post->ID);
+//     // $_data['gallery'] = get_field('gallery');
+//     // $_data['ticketlink']= get_field('tickets_available',$post->ID);
 
-    // $data->data = $_data;
-    // return $data;
+//     // $data->data = $_data;
+//     // return $data;
     
-    $posts = get_posts();
+//     $posts = get_posts();
 
-	$data = [];
-	$i = 0;
+// 	$data = [];
+// 	$i = 0;
 
-	foreach($posts as $post) {
-		$data[$i]['id'] = $post->ID;
-		$data[$i]['title'] = $post->post_title;
-		$data[$i]['content'] = $post->post_content;
-        $data[$i]['excerpt'] = $post->post_excerpt;
-        $data[$i]['price'] = get_field("price",$post->ID);
-        $data[$i]['location'] = get_field("location",$post->ID);
-        $data[$i]['author'] = $post->post_author;
-		$data[$i]['slug'] = $post->post_name;
-        $data[$i]['date'] = $post->post_date;
-		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
-		$i++;
-	}
+// 	foreach($posts as $post) {
+// 		$data[$i]['id'] = $post->ID;
+// 		$data[$i]['title'] = $post->post_title;
+// 		$data[$i]['content'] = $post->post_content;
+//         $data[$i]['excerpt'] = $post->post_excerpt;
+//         $data[$i]['price'] = get_field("price",$post->ID);
+//         $data[$i]['location'] = get_field("location",$post->ID);
+//         $data[$i]['author'] = $post->post_author;
+// 		$data[$i]['slug'] = $post->post_name;
+//         $data[$i]['date'] = $post->post_date;
+// 		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+// 		$i++;
+// 	}
 
-	return $data;
+// 	return $data;
 
-}
+// }
 
-add_filter('rest_prepare_post', 'da_rest_prepare_post', 10, 3);
+// add_filter('rest_prepare_post', 'da_rest_prepare_post', 10, 3);
 
 
 
@@ -187,6 +187,60 @@ if ($limit!='')$numposts=$limit; else $numposts=99999;
 	return $data;
 }
 
+function da_posts($data) {
+    $posts_in=explode("-",$data['includes']);
+    // echo $data['includes'];
+    //  print_r( $posts_in);
+    
+	$args = [
+		'numberposts' => 99999,
+		'post_type' => 'attraction',
+        'post__in' => $posts_in,
+    ];
+	
+
+	$posts = get_posts($args);
+
+	$data = [];
+	$i = 0;
+
+	foreach($posts as $post) {
+		$data[$i]['id'] = $post->ID;
+		$data[$i]['title'] = $post->post_title;
+		$data[$i]['content'] = $post->post_content;
+        $data[$i]['excerpt'] = $post->post_excerpt;
+        $data[$i]['price'] = get_field("price",$post->ID);
+        $data[$i]['location'] = get_field("location",$post->ID);
+        $data[$i]['author'] = $post->post_author;
+		$data[$i]['slug'] = $post->post_name;
+        $data[$i]['date'] = $post->post_date;
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+		$i++;
+	}
+
+	return $data;
+}
+
+function da_post($data) {
+	$post = get_post($data['id']);
+
+	$data = [];
+
+		$data['id'] = $post->ID;
+		$data['title'] = $post->post_title;
+		$data['content'] = $post->post_content;
+        $data['excerpt'] = $post->post_excerpt;
+        $data['price'] = get_field("price",$post->ID);
+        $data['location'] = get_field("location",$post->ID);
+        $data['gallery'] = get_field("gallery",$post->ID);
+        $data['author'] = $post->post_author;
+		$data['slug'] = $post->post_name;
+        $data['date'] = $post->post_date;
+		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? '';
+
+	return $data;
+}
+
 function da_attraction($data) {
 	$post = get_post($data['id']);
 
@@ -217,6 +271,15 @@ register_rest_route( 'da/v2', 'attractions/(?P<includes>[a-zA-Z0-9-]+)', array(
     register_rest_route( 'da/v2', 'attraction/(?P<id>[a-zA-Z0-9-]+)', array(
 		'methods' => 'GET',
 		'callback' => 'da_attraction',
+	) );
+
+    register_rest_route( 'da/v2', 'posts/(?P<includes>[a-zA-Z0-9-]+)', array(
+		'methods' => 'GET',
+		'callback' => 'da_posts',
+	) );
+    register_rest_route( 'da/v2', 'posts/(?P<id>[a-zA-Z0-9-]+)', array(
+		'methods' => 'GET',
+		'callback' => 'da_post',
 	) );
 
     register_rest_route( 'da/v2', 'gems/', array(
@@ -253,7 +316,7 @@ function post_featured_image_json( $data, $post, $context ) {
 
   return $data;
 }
-add_filter( 'rest_prepare_post', 'post_featured_image_json', 10, 3 );
+// add_filter( 'rest_prepare_post', 'post_featured_image_json', 10, 3 );
 
 
 
