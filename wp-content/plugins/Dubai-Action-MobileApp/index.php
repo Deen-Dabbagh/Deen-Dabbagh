@@ -154,7 +154,6 @@ else
         $data[$i]['price'] = get_field("price",$post->ID);
         $data[$i]['location'] = get_field("location",$post->ID);
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
-        $data[$i]['video'] = get_field("video",$post->ID);
         $_data[$i]['author'] = $post->post_author;
         $data[$i]["author"]["name"]   = get_the_author_meta($_data['author']);
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
@@ -190,7 +189,6 @@ if ($limit!='')$numposts=$limit; else $numposts=99999;
         $data[$i]['price'] = get_field("price",$post->ID);
         $data[$i]['location'] = get_field("location",$post->ID);
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
-        $data[$i]['video'] = get_field("video",$post->ID);
         $_data[$i]['author'] = $post->post_author;
         $data[$i]["author"]["name"]   = get_the_author_meta($_data['author']);
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
