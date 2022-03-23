@@ -88,7 +88,7 @@ function da_attractions($data) {
         $data[$i]['author'] =get_the_author_meta($data[$i]['author']);
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
-		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",true);
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",false);
 		$i++;
 	}
 
@@ -111,7 +111,7 @@ function da_gem($data) {
         $data["author"]["avatar"] = get_avatar_url($_data['author']);
         $data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
-		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",true);
+		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",false);
 
 	return $data;
 }
@@ -155,7 +155,7 @@ else
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
         $data[$i]['tags'] = get_the_tags($post->ID);
         $data[$i]['date'] = $post->post_date;
-		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",true);
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",false);
 		$i++;
 	}
 
@@ -188,7 +188,7 @@ if ($limit!='')$numposts=$limit; else $numposts=99999;
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
-		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",true);
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",false);
 		$i++;
 	}
 
@@ -225,7 +225,7 @@ function da_posts($data) {
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
-		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",true);
+		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",false);
 		$i++;
 	}
 
@@ -249,7 +249,7 @@ function da_post($data) {
         $data["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
-		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",true);
+		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",false);
 
 	return $data;
 }
@@ -271,7 +271,7 @@ function da_attraction($data) {
         $data["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
-		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",true);
+		$data['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",false);
 
 	return $data;
 }
