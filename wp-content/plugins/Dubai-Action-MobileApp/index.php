@@ -20,11 +20,12 @@ function da_rest_prepare_post($data, $post, $request) {
     $_data['custom']["featured_image"] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta( $post->ID, 'featuredimg', true );
     
     if ($_data['custom']["featured_image"]=='')$_data['custom']["featured_image"]=get_post_meta( $post->ID, 'featuredimg', true );
-	$_data['custom']["author"]["name"]   = get_author_name($_data['author']);
+	$_data['custom']["author"]["name"]   = get_the_author_meta($_data['author']);
     $_data['custom']["author"]["avatar"] = get_avatar_url($_data['author']);
     $_data['custom']["categories"] = get_the_category($_data["id"]);
     $_data['custom']["startdate"] = get_field('event_start',$post->ID);
     $_data['custom']["enddate"] = get_field('event_end',$post->ID);
+    $_data['gallery'] = get_field('gallery');
     $_data['ticketlink']= get_field('tickets_available',$post->ID);
 
     $data->data = $_data;
@@ -93,11 +94,11 @@ function da_gems($data) {
    $tags=$_GET['tags'];
 
     if ($tags){
-        // $tags=explode(",",$_GET['tags']);
+        $tags=explode(",",$_GET['tags']);
 	$args = [
 		'numberposts' => 99999,
 		'post_type' => 'hidden',
-        'post__in' => $posts_in,
+        'post__in' => $tags,
         'tag' => $tags
     ];
     //  print_r($args);
@@ -121,6 +122,7 @@ else
         $data[$i]['excerpt'] = $post->post_excerpt;
         $data[$i]['price'] = get_field("price",$post->ID);
         $data[$i]['location'] = get_field("location",$post->ID);
+        $data[$i]['gallery'] = get_field("gallery",$post->ID);
         $data[$i]['author'] = $post->post_author;
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['tags'] = get_the_tags($post->ID);
@@ -152,6 +154,7 @@ if ($limit!='')$numposts=$limit; else $numposts=99999;
         $data[$i]['excerpt'] = $post->post_excerpt;
         $data[$i]['price'] = get_field("price",$post->ID);
         $data[$i]['location'] = get_field("location",$post->ID);
+        $data[$i]['gallery'] = get_field("gallery",$post->ID);
         $data[$i]['author'] = $post->post_author;
 		$data[$i]['slug'] = $post->post_name;
         $data[$i]['date'] = $post->post_date;
@@ -173,6 +176,7 @@ function da_attraction($data) {
         $data['excerpt'] = $post->post_excerpt;
         $data['price'] = get_field("price",$post->ID);
         $data['location'] = get_field("location",$post->ID);
+        $data['gallery'] = get_field("gallery",$post->ID);
         $data['author'] = $post->post_author;
 		$data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
