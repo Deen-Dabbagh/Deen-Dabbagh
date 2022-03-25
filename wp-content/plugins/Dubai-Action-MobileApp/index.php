@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function check_modified(){
 $post_type=$_GET['post_type'];
 $args = [
-    'numberposts' => 1,
+    'numberposts' => 999999,
     'post_type' => $post_type,
     'order_by' =>  "post_modified",
     'category' =>  $_GET['category'],
@@ -68,12 +68,12 @@ $args = [
 ];
 $i=0;
     $posts = get_posts($args);
-    foreach($posts as $post) {
+    // foreach($posts as $post) {
     $data[$i]['modified'] = $posts[$i]->post_modified;
     $data[$i]['count'] = count($posts);
     $data[$i]['post_title'] = $posts[$i]->post_title;
-    $i++;
-    }
+    // $i++;
+    // }
     return $data;
 }
 function da_attractions($data) {
