@@ -62,13 +62,12 @@ $post_type=$_GET['post_type'];
 $args = [
     'numberposts' => 999999,
     'post_type' => $post_type,
-    'order_by' =>"modified",
+    'order_by' =>"post_modified",
         'order' =>"DESC"
 ];
 $posts = get_posts($args);
     $data[0]['id'] = $posts[0]->ID;
-    $data[0]['modified'] = $posts[0]->ID;
-    $data[0]['id'] =$posts[0]->ID;
+    $data[0]['modified'] = $posts[0]->post_modified;
     $data[0]['count'] = count($data);
 
     return $data;
