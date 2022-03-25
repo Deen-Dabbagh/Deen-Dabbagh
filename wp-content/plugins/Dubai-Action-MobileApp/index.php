@@ -64,7 +64,7 @@ $args = [
     'post_type' => $post_type,
     'order_by' =>  $_GET['orderby'],
     'category' =>  $_GET['category'],
-    'order' =>"DESC"
+    'order' =>"ASC"
 ];
 $i=0;
     $posts = get_posts($args);
