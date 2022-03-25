@@ -57,7 +57,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 // add_filter('rest_prepare_post', 'da_rest_prepare_post', 10, 3);
 
 
-
+function check_modified(){
+$post_type=$_GET['post_type'];
+$args = [
+    'numberposts' => 999999,
+    'post_type' => $post_type,
+    'order_by' =>"modified",
+        'order' =>"DESC"
+];
+$posts = get_posts($args);
+    $data[0]['id'] = $posts[0]->ID;
+    $data[0]['modified'] = $posts[0]->ID;
+    $data[0]['id'] =$posts[0]->ID;
+    $data[0]['count'] = count($data);
+}
 function da_attractions($data) {
     $posts_in=explode("-",$data['includes']);
     // echo $data['includes'];
@@ -344,6 +357,10 @@ register_rest_route( 'da/v2', 'attractions/(?P<includes>[a-zA-Z0-9-]+)', array(
 		'callback' => 'da_bucketlist',
 	) );
 
+    register_rest_route( 'da/v2', 'modified/', array(
+		'methods' => 'GET',
+		'callback' => 'check_modified',
+	) );
     
 
 
