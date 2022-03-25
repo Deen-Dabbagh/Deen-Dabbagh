@@ -63,6 +63,7 @@ $args = [
     'numberposts' => 999999,
     'post_type' => $post_type,
     'order_by' =>  $_GET['orderby'],
+    'category__in' =>  $_GET['category'],
     'order' =>"DESC"
 ];
     $posts = get_posts($args);
