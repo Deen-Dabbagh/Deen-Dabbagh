@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function check_modified(){
 $post_type=$_GET['post_type'];
 $args = [
-    'numberposts' => 999999,
+    'numberposts' => 1,
     'post_type' => $post_type,
     'order_by' =>  "post_modified",
     'category' =>  $_GET['category'],
