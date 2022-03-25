@@ -68,6 +68,7 @@ $args = [
     $posts = get_posts($args);
     $data['modified'] = $posts[0]->post_modified;
     $data['count'] = count($posts);
+    $data['post_title'] = $posts[0]->post_title;
 
     return $data;
 }
