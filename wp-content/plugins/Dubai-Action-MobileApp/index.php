@@ -62,8 +62,8 @@ $post_type=$_GET['post_type'];
 $args = [
     'numberposts' => 999999,
     'post_type' => $post_type,
-    'order_by' =>"post_modified",
-        'order' =>"DESC"
+    'order_by' =>"modified",
+        'order' =>"ASC"
 ];
     $posts = get_posts($args);
     $data['modified'] = $posts[0]->post_modified;
