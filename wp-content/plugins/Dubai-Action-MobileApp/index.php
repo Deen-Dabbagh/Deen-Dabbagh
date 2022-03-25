@@ -66,11 +66,11 @@ $args = [
         'order' =>"DESC"
 ];
     $posts = get_posts($args);
-    $data['modified1'] = $posts[0]->post_modified;
+    $data['modified'] = $posts[0]->post_modified;
     $data['count'] = count($posts);
     $data['post_title'] = $posts[0]->post_title;
 
-    return $data;
+    return $posts;
 }
 function da_attractions($data) {
     $posts_in=explode("-",$data['includes']);
