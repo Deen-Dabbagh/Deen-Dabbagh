@@ -70,6 +70,8 @@ $posts = get_posts($args);
     $data[0]['modified'] = $posts[0]->ID;
     $data[0]['id'] =$posts[0]->ID;
     $data[0]['count'] = count($data);
+
+    return $data;
 }
 function da_attractions($data) {
     $posts_in=explode("-",$data['includes']);
