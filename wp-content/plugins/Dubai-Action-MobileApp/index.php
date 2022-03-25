@@ -61,7 +61,8 @@ function check_modified(){
 $post_type=$_GET['post_type'];
 $args = [
     'numberposts' => 999999,
-    'order_by' =>"post_modified",
+    'post_type' => $post_type,
+    'order_by' =>"post_modified1",
         'order' =>"DESC"
 ];
     $posts = get_posts($args);
