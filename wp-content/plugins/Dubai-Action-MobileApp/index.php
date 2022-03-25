@@ -62,7 +62,7 @@ $post_type=$_GET['post_type'];
 $args = [
     'numberposts' => 999999,
     'post_type' => $post_type,
-    'order_by' =>"modified",
+    'order_by' =>"post_modified",
         'order' =>"ASC"
 ];
     $posts = get_posts($args);
