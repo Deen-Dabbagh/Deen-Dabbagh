@@ -65,10 +65,9 @@ $args = [
     'order_by' =>"post_modified",
         'order' =>"DESC"
 ];
-$posts = get_posts($args);
-    $data[0]['id'] = $posts[0]->ID;
+    $posts = get_posts($args);
     $data[0]['modified'] = $posts[0]->post_modified;
-    $data[0]['count'] = count($data);
+    $data[0]['count'] = count($posts);
 
     return $data;
 }
