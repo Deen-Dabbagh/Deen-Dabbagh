@@ -109,6 +109,8 @@ function da_attractions($data) {
         $data[$i]['modified'] = $post->post_modified;
         $data[$i]['featured_image']= getPostFeatured($post->ID);
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
+        $data[$i]['category'] = $post->post_category;
+
         $data[$i]['video'] = get_field("video",$post->ID);
 
         		$i++;
@@ -137,6 +139,8 @@ $data['date'] = $post->post_date;
         $data['modified'] = $post->post_modified;        $data['featured_image']= getPostFeatured($post->ID);
         $data['gallery'] = get_field("gallery",$post->ID);
         $data['video'] = get_field("video",$post->ID);
+        $data['category'] = $post->post_category;
+
 
 	return $data;
 }
@@ -184,6 +188,8 @@ else
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
         $data[$i]['video'] = get_field("video",$post->ID);
         $data[$i]['featured_image']= getPostFeatured($post->ID);
+        $data[$i]['category'] = $post->post_category;
+
 		$i++;
 	}
 
@@ -220,6 +226,8 @@ if ($limit!='')$numposts=$limit; else $numposts=99999;
         $data[$i]['modified'] = $post->post_modified;
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
         $data[$i]['video'] = get_field("video",$post->ID);
+        $data[$i]['category'] = $post->post_category;
+
 		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",false);
 		$i++;
 	}
@@ -264,6 +272,8 @@ function da_posts($data) {
         $data[$i]['modified'] = $post->post_modified;
         $data[$i]['featured_image']= getPostFeatured($post->ID);
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
+        $data[$i]['category'] = $post->post_category;
+
         $data[$i]['video'] = get_field("video",$post->ID);
 
         $i++;
@@ -296,7 +306,9 @@ function da_post($data) {
         $data['tags'] = get_the_tags($post->ID);
 		$data['slug'] = $post->post_name;
 $data['date'] = $post->post_date;
-        $data['modified'] = $post->post_modified;  
+        $data['modified'] = $post->post_modified;
+        $data['category'] = $post->post_category;
+
         $data['featured_image']= getPostFeatured($post->ID);
 
 	return $data;
@@ -320,7 +332,8 @@ function da_attraction($data) {
 		$data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
         $data['tags'] = get_the_tags($post->ID);
-        $data['modified'] = $post->post_modified;        
+        $data['modified'] = $post->post_modified;
+        $data['category'] = $post->post_category;
         $data['featured_image']= getPostFeatured($post->ID);
 
 
