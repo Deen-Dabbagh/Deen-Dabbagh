@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 //     // if ($_data['custom']["featured_image"]=='')$_data['custom']["featured_image"]=get_post_meta( $post->ID, 'featuredimg', true );
 // 	// $_data['custom']["author"]["name"]   = get_the_author_meta($_data['author']);
 //     // $_data['custom']["author"]["avatar"] = get_avatar_url($_data['author']);
-//     // $_data['custom']["categories"] = get_the_category($_data["id"]);
+//     // $_data['custom']["categories"] = get_the_category($post->ID);
 //     // $_data['custom']["startdate"] = get_field('event_start',$post->ID);
 //     // $_data['custom']["enddate"] = get_field('event_end',$post->ID);
 //     // $_data['gallery'] = get_field('gallery');
@@ -109,7 +109,7 @@ function da_attractions($data) {
         $data[$i]['modified'] = $post->post_modified;
         $data[$i]['featured_image']= getPostFeatured($post->ID);
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
-        $data[$i]['category'] = get_the_category($_data["id"]);
+        $data[$i]['category'] = get_the_category($post->ID);
 
         $data[$i]['video'] = get_field("video",$post->ID);
 
@@ -139,7 +139,7 @@ $data['date'] = $post->post_date;
         $data['modified'] = $post->post_modified;        $data['featured_image']= getPostFeatured($post->ID);
         $data['gallery'] = get_field("gallery",$post->ID);
         $data['video'] = get_field("video",$post->ID);
-        $data['category'] = get_the_category($_data["id"]);
+        $data['category'] = get_the_category($post->ID);
 
 
 	return $data;
@@ -188,7 +188,7 @@ else
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
         $data[$i]['video'] = get_field("video",$post->ID);
         $data[$i]['featured_image']= getPostFeatured($post->ID);
-        $data[$i]['category'] = get_the_category($_data["id"]);
+        $data[$i]['category'] = get_the_category($post->ID);
 
 		$i++;
 	}
@@ -226,7 +226,7 @@ if ($limit!='')$numposts=$limit; else $numposts=99999;
         $data[$i]['modified'] = $post->post_modified;
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
         $data[$i]['video'] = get_field("video",$post->ID);
-        $data[$i]['category'] = get_the_category($_data["id"]);
+        $data[$i]['category'] = get_the_category($post->ID);
 
 		$data[$i]['featured_image'] = get_the_post_thumbnail_url($post->ID, "original") ?? get_post_meta($post->ID,"featuredimg",false);
 		$i++;
@@ -272,7 +272,7 @@ function da_posts($data) {
         $data[$i]['modified'] = $post->post_modified;
         $data[$i]['featured_image']= getPostFeatured($post->ID);
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
-        $data[$i]['category'] = get_the_category($_data["id"]);
+        $data[$i]['category'] = get_the_category($post->ID);
 
         $data[$i]['video'] = get_field("video",$post->ID);
 
@@ -307,7 +307,7 @@ function da_post($data) {
 		$data['slug'] = $post->post_name;
 $data['date'] = $post->post_date;
         $data['modified'] = $post->post_modified;
-        $data['category'] = get_the_category($_data["id"]);
+        $data['category'] = get_the_category($post->ID);
 
         $data['featured_image']= getPostFeatured($post->ID);
 
@@ -333,7 +333,7 @@ function da_attraction($data) {
         $data['date'] = $post->post_date;
         $data['tags'] = get_the_tags($post->ID);
         $data['modified'] = $post->post_modified;
-        $data['category'] = get_the_category($_data["id"]);
+        $data['category'] = get_the_category($post->ID);
         $data['featured_image']= getPostFeatured($post->ID);
 
 
