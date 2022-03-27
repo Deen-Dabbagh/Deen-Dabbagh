@@ -243,7 +243,7 @@ function da_posts($data) {
     $orderby=$_GET['orderby'];
     $order=$_GET['order'];
 	$args = [
-		'numberposts' => 99999,
+		'numberposts' => $_GET['per_page'],
         'category__in'		=> $categories,
         'order_by' =>$orderby,
         'order' =>$order
