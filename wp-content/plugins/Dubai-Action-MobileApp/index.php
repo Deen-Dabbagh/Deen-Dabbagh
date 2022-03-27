@@ -104,6 +104,7 @@ function da_attractions($data) {
         $data[$i]["author"]["name"]   = get_the_author_meta($_data['author']);
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data[$i]['slug'] = $post->post_name;
+        $data[$i]['tags'] = get_the_tags($post->ID);
         $data[$i]['date'] = $post->post_date;        
         $data[$i]['modified'] = $post->post_modified;
         $data[$i]['featured_image']= getPostFeatured($post->ID);
@@ -130,6 +131,7 @@ function da_gem($data) {
         $_data['author'] = $post->post_author;
         $data["author"]["name"]   = get_the_author_meta($_data['author']);
         $data["author"]["avatar"] = get_avatar_url($_data['author']);
+        $data['tags'] = get_the_tags($post->ID);
         $data['slug'] = $post->post_name;
 $data['date'] = $post->post_date;
         $data['modified'] = $post->post_modified;        $data['featured_image']= getPostFeatured($post->ID);
@@ -213,6 +215,7 @@ if ($limit!='')$numposts=$limit; else $numposts=99999;
         $data[$i]["author"]["name"]   = get_the_author_meta($_data['author']);
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data[$i]['slug'] = $post->post_name;
+        $data[$i]['tags'] = get_the_tags($post->ID);
         $data[$i]['date'] = $post->post_date;        
         $data[$i]['modified'] = $post->post_modified;
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
@@ -290,6 +293,7 @@ function da_post($data) {
         $_data['author'] = $post->post_author;
         $data["author"]["name"]   = get_the_author_meta($_data['author']);
         $data["author"]["avatar"] = get_avatar_url($_data['author']);
+        $data['tags'] = get_the_tags($post->ID);
 		$data['slug'] = $post->post_name;
 $data['date'] = $post->post_date;
         $data['modified'] = $post->post_modified;  
@@ -315,6 +319,7 @@ function da_attraction($data) {
         $data["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
+        $data['tags'] = get_the_tags($post->ID);
         $data['modified'] = $post->post_modified;        
         $data['featured_image']= getPostFeatured($post->ID);
 
