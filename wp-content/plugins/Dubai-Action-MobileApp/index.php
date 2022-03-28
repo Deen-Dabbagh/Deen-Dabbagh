@@ -244,7 +244,7 @@ function da_posts($data) {
     $order=$_GET['order'];
 	$args = [
 		'numberposts' => $_GET['per_page'],
-        // 'page' => $_GET['page'],
+        'page' => $_GET['page'],
         'category__in'		=> $categories,
         'order_by' =>$orderby,
         'order' =>$order
@@ -257,11 +257,9 @@ function da_posts($data) {
 
 	$data = [];
 	$i = 0;
-$currentPost=$_GET['per_page'] *  $_GET['page'];
 
 	foreach($posts as $post) {
-		if ($i>$currentPost && $i<$_GET['per_page']) {
-        $data[$i]['id'] = $post->ID;
+		$data[$i]['id'] = $post->ID;
 		$data[$i]['title'] = $post->post_title;
 		$data[$i]['content'] = $post->post_content;
         $data[$i]['excerpt'] = $post->post_excerpt;
@@ -278,7 +276,7 @@ $currentPost=$_GET['per_page'] *  $_GET['page'];
         $data[$i]['category'] = $post->post_category;
 
         $data[$i]['video'] = get_field("video",$post->ID);
-        }
+
         $i++;
 	}
 
