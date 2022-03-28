@@ -258,6 +258,7 @@ function da_posts($data) {
 	$data = [];
 	$i = 0;
 $startFrom=$_GET['per_page']*$_GET['page'];
+echo $startFrom;
 	foreach($posts as $post) {
         while($i>$startFrom && $i<$startFrom*$_GET['per_page']){
 		$data[$i]['id'] = $post->ID;
