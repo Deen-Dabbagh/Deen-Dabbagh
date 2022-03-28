@@ -244,10 +244,10 @@ function da_posts($data) {
     $order=$_GET['order'];
 	$args = [
 		'numberposts' => $_GET['per_page'],
-        'page' => $_GET['page'],
         'category__in'		=> $categories,
         'order_by' =>$orderby,
-        'order' =>$order
+        'order' =>$order,
+        'page' =>$_GET['per_page']
 		// 'post_type' => 'post',
         // 'post__in' => $posts_in,
     ];
