@@ -257,8 +257,9 @@ function da_posts($data) {
 
 	$data = [];
 	$i = 0;
-
+$startFrom=$_GET['per_page']*$_GET['page'];
 	foreach($posts as $post) {
+        while($i>$startFrom && $i<$startFrom*$_GET['per_page']){
 		$data[$i]['id'] = $post->ID;
 		$data[$i]['title'] = $post->post_title;
 		$data[$i]['content'] = $post->post_content;
@@ -276,7 +277,7 @@ function da_posts($data) {
         $data[$i]['category'] = $post->post_category;
 
         $data[$i]['video'] = get_field("video",$post->ID);
-
+        }
         $i++;
 	}
 
