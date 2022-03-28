@@ -258,9 +258,9 @@ function da_posts($data) {
 	$data = [];
 	$i = 0;
 $startFrom=$_GET['per_page']*$_GET['page'];
-echo $startFrom;
+// echo $startFrom;
 	foreach($posts as $post) {
-        while($i>$startFrom && $i<$startFrom*$_GET['per_page']){
+        while($i<$startFrom){
 		$data[$i]['id'] = $post->ID;
 		$data[$i]['title'] = $post->post_title;
 		$data[$i]['content'] = $post->post_content;
