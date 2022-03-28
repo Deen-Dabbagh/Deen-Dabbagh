@@ -247,7 +247,7 @@ function da_posts($data) {
         'category__in'		=> $categories,
         'order_by' =>$orderby,
         'order' =>$order,
-        'page' =>$_GET['per_page']
+        'paged' =>$_GET['page']
 		// 'post_type' => 'post',
         // 'post__in' => $posts_in,
     ];
