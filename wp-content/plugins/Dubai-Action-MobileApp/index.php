@@ -182,7 +182,8 @@ else
         $_data[$i]['author'] = $post->post_author;
         $data[$i]["author"]["name"]   = get_the_author_meta($_data['author']);
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
-        $data[$i]['tags'] = get_the_tags($post->ID);
+        $_data[$i]['tags'] = get_the_tags($post->ID);
+        $data[$i]['tags']=$_data[$i]['tags']['name'];
         $data[$i]['date'] = $post->post_date;        
         $data[$i]['modified'] = $post->post_modified;
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
