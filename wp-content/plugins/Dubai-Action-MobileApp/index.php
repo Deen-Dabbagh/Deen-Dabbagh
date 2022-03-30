@@ -133,7 +133,11 @@ function da_gem($data) {
         $_data['author'] = $post->post_author;
         $data["author"]["name"]   = get_the_author_meta($_data['author']);
         $data["author"]["avatar"] = get_avatar_url($_data['author']);
-        $data['tags'] = get_the_tags($post->ID);
+        // $data['tags'] = get_the_tags($post->ID);
+        $tags = get_the_tags($post->ID);
+        foreach($tags as $tag){
+            $data['tags'][]=$tag->name;
+        }
         $data['slug'] = $post->post_name;
 $data['date'] = $post->post_date;
         $data['modified'] = $post->post_modified;        $data['featured_image']= getPostFeatured($post->ID);
@@ -154,7 +158,7 @@ function da_gems($data) {
 	$args = [
 		'numberposts' => 99999,
 		'post_type' => 'hidden',
-        'post__in' => $tags,
+        // 'post__in' => $tags,
         'tag' => $tags
     ];
     //  print_r($args);
@@ -182,7 +186,12 @@ else
         $_data[$i]['author'] = $post->post_author;
         $data[$i]["author"]["name"]   = get_the_author_meta($_data['author']);
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
-        $data[$i]['tags'] = get_the_tags($post->ID);
+        // $tags = get_the_tags($post->ID);
+        // foreach($tags as $tag){
+        //     $data[$i]['tags'][]=$tag->name;
+        // }
+        
+        //$data[$i]['alltags']=get_the_tags($post->ID);
         $data[$i]['date'] = $post->post_date;        
         $data[$i]['modified'] = $post->post_modified;
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
@@ -221,8 +230,10 @@ if ($limit!='')$numposts=$limit; else $numposts=99999;
         $data[$i]["author"]["name"]   = get_the_author_meta($_data['author']);
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
 		$data[$i]['slug'] = $post->post_name;
-        $data[$i]['tags'] = get_the_tags($post->ID);
-        $data[$i]['date'] = $post->post_date;        
+        $tags = get_the_tags($post->ID);
+        foreach($tags as $tag){
+            $data[$i]['tags'][]=$tag->name;
+        }        $data[$i]['date'] = $post->post_date;        
         $data[$i]['modified'] = $post->post_modified;
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
         $data[$i]['video'] = get_field("video",$post->ID);
@@ -276,7 +287,10 @@ $startFrom=$_GET['per_page']*$_GET['page'];
         $data[$i]['featured_image']= getPostFeatured($post->ID);
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
         $data[$i]['category'] = $post->post_category;
-
+        $tags = get_the_tags($post->ID);
+        foreach($tags as $tag){
+            $data[$i]['tags'][]=$tag->name;
+        }
         $data[$i]['video'] = get_field("video",$post->ID);
         // }
         $i++;
@@ -306,7 +320,11 @@ function da_post($data) {
         $_data['author'] = $post->post_author;
         $data["author"]["name"]   = get_the_author_meta($_data['author']);
         $data["author"]["avatar"] = get_avatar_url($_data['author']);
-        $data['tags'] = get_the_tags($post->ID);
+        // $data['tags'] = get_the_tags($post->ID);
+        $tags = get_the_tags($post->ID);
+        foreach($tags as $tag){
+            $data['tags'][]=$tag->name;
+        }
 		$data['slug'] = $post->post_name;
 $data['date'] = $post->post_date;
         $data['modified'] = $post->post_modified;
@@ -335,6 +353,10 @@ function da_attraction($data) {
 		$data['slug'] = $post->post_name;
         $data['date'] = $post->post_date;
         $data['tags'] = get_the_tags($post->ID);
+        $tags = get_the_tags($post->ID);
+        foreach($tags as $tag){
+            $data['tags'][]=$tag->name;
+        }
         $data['modified'] = $post->post_modified;
         $data['category'] = $post->post_category;
         $data['featured_image']= getPostFeatured($post->ID);
