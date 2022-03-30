@@ -187,7 +187,7 @@ else
             $data[$i]['tags'][]=$tag->name;
         }
         
-        $data[$i]['alltags']=get_the_tags($post->ID);
+        //$data[$i]['alltags']=get_the_tags($post->ID);
         $data[$i]['date'] = $post->post_date;        
         $data[$i]['modified'] = $post->post_modified;
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
