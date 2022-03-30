@@ -184,7 +184,7 @@ else
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
         $tags = get_the_tags($post->ID);
         foreach($tags as $tag){
-            $data[$i]['tags'][]=$tag;
+            $data[$i]['tags'][]=$tag->name;
         }
         
         $data[$i]['alltags']=get_the_tags($post->ID);
