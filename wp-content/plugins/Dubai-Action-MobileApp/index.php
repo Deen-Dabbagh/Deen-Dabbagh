@@ -69,10 +69,10 @@ $args = [
 $i=0;
     $posts = get_posts($args);
     foreach($posts as $post) {
-    $data['modified'] = $posts[$i]->post_modified;
-    $data['count'] = count($posts);
-    $data['post_title'] = $posts[$i]->post_title;
-    // $i++;
+    $data[$i]['modified'] = $posts[$i]->post_modified;
+    $data[$i]['count'] = count($posts);
+    $data[$i]['post_title'] = $posts[$i]->post_title;
+     $i++;
     }
     return $data;
 }
