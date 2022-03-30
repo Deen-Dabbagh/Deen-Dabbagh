@@ -186,10 +186,10 @@ else
         $_data[$i]['author'] = $post->post_author;
         $data[$i]["author"]["name"]   = get_the_author_meta($_data['author']);
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
-        $tags = get_the_tags($post->ID);
-        foreach($tags as $tag){
-            $data[$i]['tags'][]=$tag->name;
-        }
+        // $tags = get_the_tags($post->ID);
+        // foreach($tags as $tag){
+        //     $data[$i]['tags'][]=$tag->name;
+        // }
         
         //$data[$i]['alltags']=get_the_tags($post->ID);
         $data[$i]['date'] = $post->post_date;        
