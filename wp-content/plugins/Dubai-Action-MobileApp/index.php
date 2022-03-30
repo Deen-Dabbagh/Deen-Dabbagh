@@ -65,7 +65,7 @@ $args = [
     'post_status' => 'publish',
     'order_by' =>  "modified",
     'category' =>  $_GET['category'],
-    'order' =>"DESC"
+    // 'order' =>"DESC"
 ];
 $i=0;
     $posts = get_posts($args);
