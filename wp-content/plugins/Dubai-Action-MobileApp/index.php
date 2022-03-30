@@ -184,6 +184,7 @@ else
         $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
         $tags = get_the_tags($post->ID);
         $data[$i]['tags']=$tags->name;
+        $data[$i]['alltags']=get_the_tags($post->ID);
         $data[$i]['date'] = $post->post_date;        
         $data[$i]['modified'] = $post->post_modified;
         $data[$i]['gallery'] = get_field("gallery",$post->ID);
