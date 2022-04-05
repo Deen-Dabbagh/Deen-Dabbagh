@@ -159,7 +159,6 @@ function da_gems($data) {
 	$args = [
 		'numberposts' => 99999,
 		'post_type' => 'hidden',
-        'post__in' => $posts_in,
         'tag' => $tags
     ];
     //  print_r($args);
