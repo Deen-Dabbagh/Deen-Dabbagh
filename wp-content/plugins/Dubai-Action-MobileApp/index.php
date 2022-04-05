@@ -169,7 +169,7 @@ else
 		'numberposts' => 99999,
 		'post_type' => 'hidden',
     ];
-    if ($posts_in!=[])$args=[
+    if (count($posts_in)>0)$args=[
         'numberposts' => 99999,
     'post_type' => 'hidden',
     'post__in' => $posts_in,
