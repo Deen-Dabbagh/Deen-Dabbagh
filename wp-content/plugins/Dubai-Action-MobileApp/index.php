@@ -170,6 +170,7 @@ else
 		'post_type' => 'hidden',
     ];
     if (count($posts_in)>0){
+        echo "Here";
     $args=[
         'numberposts' => 99999,
     'post_type' => 'hidden',
