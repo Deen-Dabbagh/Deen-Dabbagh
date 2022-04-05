@@ -153,13 +153,13 @@ $data['date'] = $post->post_date;
 function da_gems($data) {
     // echo $_GET['tags'];
    $tags=$_GET['tags'];
-
+   $posts_in=explode("-",$data['includes']);
     if ($tags){
         $tags=explode(",",$_GET['tags']);
 	$args = [
 		'numberposts' => 99999,
 		'post_type' => 'hidden',
-        // 'post__in' => $tags,
+        'post__in' => $posts_in,
         'tag' => $tags
     ];
     //  print_r($args);
