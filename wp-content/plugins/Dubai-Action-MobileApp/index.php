@@ -169,11 +169,12 @@ else
 		'numberposts' => 99999,
 		'post_type' => 'hidden',
     ];
-    if (count($posts_in)>0)$args=[
+    if (count($posts_in)>0){
+    $args=[
         'numberposts' => 99999,
     'post_type' => 'hidden',
     'post__in' => $posts_in,
-];
+];}
 }
 	$posts = get_posts($args);
 
