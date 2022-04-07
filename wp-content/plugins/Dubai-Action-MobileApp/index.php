@@ -150,6 +150,55 @@ $data['date'] = $post->post_date;
 	return $data;
 }
 
+function da_gems_selected($data) {
+    // echo $_GET['tags'];
+   $posts_in=explode("-",$data['includes']);
+   
+    if ($data['includes']!=""){
+    $args=[
+    'numberposts' => 99999,
+    'post_type' => 'hidden',
+    'post__in' => $posts_in,
+];
+
+$posts = get_posts($args);
+
+	$data = [];
+	$i = 0;
+
+	foreach($posts as $post) {
+		$data[$i]['id'] = $post->ID;
+		$data[$i]['title'] = $post->post_title;
+		$data[$i]['content'] = $post->post_content;
+        $data[$i]['excerpt'] = $post->post_excerpt;
+        $data[$i]['price'] = get_field("price",$post->ID);
+        $data[$i]['location'] = get_field("location",$post->ID);
+        $data[$i]['gallery'] = get_field("gallery",$post->ID);
+        $_data[$i]['author'] = $post->post_author;
+        $data[$i]["author"]["name"]   = get_the_author_meta($_data['author']);
+        $data[$i]["author"]["avatar"] = get_avatar_url($_data['author']);
+        $tags = get_the_tags($post->ID);
+        foreach($tags as $tag){
+            $data[$i]['tags'][]=$tag->name;
+        }
+        
+        //$data[$i]['alltags']=get_the_tags($post->ID);
+        $data[$i]['date'] = $post->post_date;        
+        $data[$i]['modified'] = $post->post_modified;
+        $data[$i]['gallery'] = get_field("gallery",$post->ID);
+        $data[$i]['video'] = get_field("video",$post->ID);
+        $data[$i]['featured_image']= getPostFeatured($post->ID);
+        $data[$i]['category'] = $post->post_category;
+
+		$i++;
+	}
+}
+
+	
+
+	return $data;
+}
+
 function da_gems($data) {
     // echo $_GET['tags'];
    $tags=$_GET['tags'];
@@ -397,9 +446,9 @@ register_rest_route( 'da/v2', 'attractions/(?P<includes>[a-zA-Z0-9-]+)', array(
 		'callback' => 'da_gems',
 	) );
 
-    register_rest_route( 'da/v2', 'gems/(?P<includes>[a-zA-Z0-9-]+)', array(
+    register_rest_route( 'da/v2', 'gems-selected/(?P<includes>[a-zA-Z0-9-]+)', array(
 		'methods' => 'GET',
-		'callback' => 'da_gems',
+		'callback' => 'da_gems_selected',
 	) );
     register_rest_route( 'da/v2', 'gem/(?P<id>[a-zA-Z0-9-]+)', array(
 		'methods' => 'GET',
