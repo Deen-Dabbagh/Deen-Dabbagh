@@ -65,7 +65,7 @@ $args = [
     'post_type' => $post_type,
     'post_status' => 'publish',
     'orderby' =>  "modified",
-    'category' =>  $cat,
+    // 'category' =>  $cat,
     'order' =>"DESC"
 ];
 $i=0;
